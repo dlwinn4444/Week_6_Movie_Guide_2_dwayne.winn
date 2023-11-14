@@ -10,13 +10,10 @@
 
 def main():
     
-   
+    m_list = []
     with open("movies.txt", "w+") as file:
       file.write("Cat on a Hot Tin Roof/nOn the Waterfront/nMonty Python and the Holy Grail/n")
-      m_list = []
-      for lines in file:
-        line = file.readline(lines)
-        m_list.append(line)
+    
            
         
            
@@ -28,8 +25,8 @@ def main():
           print(c_choice)
           # check command from last function
           if c_choice == "list":
-             c_list(m_list)
-             
+             c_list()
+              
           elif c_choice== "add":
               c_add(m_list)
               c_add
@@ -62,13 +59,14 @@ def m_menu():
     
      
 # List movie functions
-def c_list(m_list):
-     for i, movie in enumerate(m_list, start = 1):
-          movie = m_list[i -1] 
-          print(i,": ",movie)
-          
-          print()
-          return m_list
+def c_list():   
+     with open("movies.txt", "r") as file:
+         for movie in file.readline)
+             for i in enumerate(movie), start = 1:
+                 print(i,": ",movie)
+                 m_list.append(movie)
+                 print()
+                 return m_list
 
 #add movie functions
 def c_add(m_list):
