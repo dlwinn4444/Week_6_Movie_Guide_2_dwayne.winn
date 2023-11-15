@@ -59,8 +59,8 @@ def m_menu():
     
      
 # List movie functions
-def c_list():   
-     with open("movies.txt", "r") as file:
+def b_list():   
+     with open(f+, "r") as file:
          for movie in file.readline)
              for i in enumerate(movie), start = 1:
                  print(i,": ",movie)
